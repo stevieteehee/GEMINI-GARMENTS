@@ -1,0 +1,2121 @@
+:root {
+
+    /* Background Colors */
+
+    --background: #0C0617;
+    --background-secondary: #160B28;
+
+    --surface: #201238;
+    --surface-light: #2A1B47;
+
+    /* Text */
+
+    --text: #F4FFF8;
+    --text-muted: #B4D8C0;
+
+    /* Accent Colors */
+
+    --accent: #43F59A;
+    --accent-light: #8CFFC5;
+
+    /* Extra Accent */
+
+    --purple: #7A4DFF;
+    --purple-light: #A979FF;
+
+    --blue: #667DFF;
+
+    /* Borders */
+
+    --border:
+        rgba(131, 82, 255, .22);
+
+    /* Shadow */
+
+    --shadow:
+        0px 18px 45px rgba(0,0,0,.45);
+
+    --transition:
+        all .3s ease;
+
+}
+
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+
+body {
+
+    background:
+
+    radial-gradient(
+        circle at top,
+        #4E1F85 0%,
+        #291147 28%,
+        #150A27 55%,
+        #090510 100%
+    );
+
+    color: var(--text);
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    line-height: 1.6;
+
+}
+
+/* ======================
+   Hidden Accessibility
+   ====================== */
+
+.visually-hidden {
+
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+
+    overflow: hidden;
+
+    clip: rect(0 0 0 0);
+
+}
+
+
+/* =======
+   Links
+   ======= */
+
+a {
+
+    color: var(--text);
+
+    text-decoration: none;
+
+    transition: var(--transition);
+
+}
+
+
+a:hover {
+
+    color: var(--accent);
+
+}
+
+
+/* =======
+   Images
+   ======= */
+
+img {
+
+    display: block;
+
+    width: 100%;
+
+}
+
+
+/* ========
+   Buttons
+   ======== */
+
+button {
+
+    cursor: pointer;
+
+    border: none;
+
+    transition: var(--transition);
+
+}
+
+
+/* =================
+   Announcement Bar
+   ================= */
+
+.announcement-bar {
+
+    background:
+
+        linear-gradient(
+        90deg,
+        #512B89,
+        #2B144A,
+        #512B89
+    );
+
+    border-bottom:
+        1px solid var(--border);
+
+    padding: .75rem;
+
+    text-align: center;
+
+    font-size: .9rem;
+
+    letter-spacing: .05rem;
+
+}
+
+
+.announcement-bar p {
+
+    color: var(--accent-light);
+
+}
+
+
+/* ===========
+   Navigation
+   =========== */
+
+nav {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding:
+
+        1.25rem
+
+        5%;
+
+    background:
+
+        rgba(10,12,20,.75);
+
+    backdrop-filter:
+
+        blur(10px);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    border-bottom:
+
+        1px solid var(--border);
+
+}
+
+
+/* =====
+   Logo
+   ====== */
+
+.logo a {
+
+    font-size: 1.8rem;
+
+    font-weight: bold;
+
+    letter-spacing: .15rem;
+
+    color: var(--accent);
+
+    text-transform: uppercase;
+
+}
+
+
+.logo a:hover {
+
+    color: var(--accent-light);
+
+}
+
+
+/* =================
+   Navigation Links
+   ================= */
+
+.nav-links {
+
+    display: flex;
+
+    list-style: none;
+
+    gap: 2rem;
+
+}
+
+
+.nav-links a {
+
+    color: var(--text);
+
+    font-weight: 600;
+
+    position: relative;
+
+}
+
+
+.nav-links a::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -6px;
+
+    width: 0;
+
+    height: 2px;
+
+    background:
+
+        var(--accent);
+
+    transition:
+
+        var(--transition);
+
+}
+
+
+.nav-links a:hover::after {
+
+    width: 100%;
+
+}
+
+
+/* ===========
+   Search Bar
+   ============*/
+
+.search-area {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: .5rem;
+
+}
+
+
+.search-area input {
+
+    width: 220px;
+
+    padding:
+
+        .7rem
+        1rem;
+
+    background:
+
+        var(--surface);
+
+    color:
+
+        var(--text);
+
+    border:
+
+        1px solid var(--border);
+
+    border-radius: 30px;
+
+    outline: none;
+
+    transition:
+
+        var(--transition);
+
+}
+
+
+.search-area input:focus {
+
+    border-color:
+
+        var(--accent);
+
+    box-shadow:
+
+        0 0 10px rgba(201,165,92,.4);
+
+}
+
+
+#searchButton {
+
+    width: 42px;
+    height: 42px;
+
+    border-radius: 50%;
+
+    background:
+
+        var(--accent);
+
+    color:
+
+        #000;
+
+    font-size: 1rem;
+
+}
+
+
+#searchButton:hover {
+
+    transform:
+
+        scale(1.08);
+
+    background:
+
+        var(--accent-light);
+
+}
+
+
+/* =============
+   Hero Section
+   ============= */
+
+.hero {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 2rem;
+
+    padding:
+
+        4rem 6%;
+
+}
+
+
+/* =============
+   Hero Content
+   ============= */
+
+.hero-content {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 3rem;
+
+    width: 100%;
+
+    max-width: 1400px;
+
+}
+
+
+.hero-content img {
+
+    width: 60%;
+
+    border-radius: 18px;
+
+    box-shadow:
+
+        var(--shadow);
+
+}
+
+
+/* ==========
+   Hero Text
+   ==========
+.hero-text {
+
+    width: 40%;
+
+}
+
+
+.hero-text h1 {
+
+    font-size: 3.5rem;
+
+    line-height: 1.1;
+
+    margin-bottom: 1rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: .15rem;
+
+}
+
+
+.hero-text p {
+
+    color:
+
+        var(--text-muted);
+
+    margin-bottom: 2rem;
+
+    font-size: 1.1rem;
+
+}
+
+
+/* ============
+   Shop Button
+   ============ */
+
+.shop-button {
+
+    display: inline-block;
+
+    background:
+
+        var(--accent);
+
+    color:
+
+        #111;
+
+    font-weight: bold;
+
+    padding:
+
+        1rem
+        2rem;
+
+    border-radius: 40px;
+
+    transition:
+
+        var(--transition);
+
+}
+
+
+.shop-button:hover {
+
+    background:
+
+        var(--accent-light);
+
+    transform:
+
+        translateY(-3px);
+
+    box-shadow:
+
+        0px 8px 18px rgba(201,165,92,.35);
+
+}
+
+
+/* =================
+   Carousel Buttons
+   ================= */
+
+.carousel-button {
+
+    width: 60px;
+    height: 60px;
+
+    border-radius: 50%;
+
+    background:
+
+        rgba(255,255,255,.08);
+
+    color:
+
+        white;
+
+    font-size: 1.5rem;
+
+    border:
+
+        1px solid var(--border);
+
+}
+
+
+.carousel-button:hover {
+
+    background:
+
+        var(--accent);
+
+    color:
+
+        black;
+
+    transform:
+
+        scale(1.1);
+
+}
+
+/* ===================
+   Main Content Width
+   =================== */
+
+main {
+
+    width: 100%;
+
+}
+
+
+/* ==========================
+   Featured Products Section
+   ========================== */
+
+.featured {
+
+    width: min(1400px, 90%);
+
+    margin: 0 auto;
+
+    padding: 3rem 0 5rem;
+
+}
+
+
+.featured h2 {
+
+    margin-bottom: 2rem;
+
+    font-size: clamp(2rem, 4vw, 3rem);
+
+    text-align: center;
+
+    text-transform: uppercase;
+
+    letter-spacing: .18rem;
+
+}
+
+
+/* Small decorative constellation line */
+
+.featured h2::after {
+
+    content: "";
+
+    display: block;
+
+    width: 90px;
+    height: 2px;
+
+    margin: 1rem auto 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            var(--accent),
+            transparent
+        );
+
+}
+
+
+/* =============
+   Product Grid
+   ============= */
+
+.product-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 1.5rem;
+
+}
+
+
+/* ==============
+   Product Cards
+   ============== */
+
+.product-card {
+
+    position: relative;
+
+    overflow: hidden;
+
+    padding: 1rem;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(28, 34, 51, .92),
+            rgba(14, 17, 28, .96)
+        );
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, .25);
+
+    transition:
+        transform .3s ease,
+        border-color .3s ease,
+        box-shadow .3s ease;
+
+}
+
+
+/* Subtle celestial glow */
+
+.product-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: -70px;
+    right: -70px;
+
+    width: 150px;
+    height: 150px;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(110, 98, 217, .2),
+            transparent 70%
+        );
+
+    pointer-events: none;
+
+}
+
+
+.product-card:hover {
+
+    transform:
+        translateY(-8px);
+
+    border-color:
+        rgba(201, 165, 92, .5);
+
+    box-shadow:
+        0 18px 40px rgba(0, 0, 0, .4),
+        0 0 22px rgba(110, 98, 217, .12);
+
+}
+
+
+/* ===============
+   Product Images
+   =============== */
+
+.product-card img {
+
+    aspect-ratio: 4 / 5;
+
+    object-fit: cover;
+
+    border-radius: 12px;
+
+    background:
+        var(--surface-light);
+
+    transition:
+        transform .4s ease,
+        filter .4s ease;
+
+}
+
+
+.product-card:hover img {
+
+    transform:
+        scale(1.03);
+
+    filter:
+        brightness(1.06);
+
+}
+
+
+/* ====================
+   Product Information
+   ==================== */
+
+.product-card h3 {
+
+    margin-top: 1.1rem;
+
+    font-size: 1.1rem;
+
+    letter-spacing: .04rem;
+
+}
+
+
+.product-card p {
+
+    margin: .35rem 0 1rem;
+
+    color:
+        var(--accent-light);
+
+    font-weight: bold;
+
+}
+
+
+/* ========================
+   Product Details Buttons
+   ======================== */
+
+.details-button {
+
+    width: 100%;
+
+    padding: .8rem 1rem;
+
+    background:
+        transparent;
+
+    color:
+        var(--text);
+
+    border:
+        1px solid rgba(255, 255, 255, .18);
+
+    border-radius: 30px;
+
+    font-weight: bold;
+
+    letter-spacing: .03rem;
+
+}
+
+
+.details-button:hover {
+
+    background:
+        var(--accent);
+
+    color:
+        #111;
+
+    border-color:
+        var(--accent);
+
+}
+
+
+.details-button:active {
+
+    transform:
+        scale(.98);
+
+}
+
+
+/* =======================
+   Lower Information Area
+   ======================= */
+
+.information {
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(260px, .8fr)
+        minmax(0, 1.8fr);
+
+    gap: 2rem;
+
+    width: min(1400px, 90%);
+
+    margin: 0 auto 5rem;
+
+}
+
+
+/* Shared panel appearance */
+
+.quick-links,
+.about {
+
+    padding: 2rem;
+
+    background:
+        rgba(19, 23, 34, .88);
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 18px;
+
+    box-shadow:
+        var(--shadow);
+
+}
+
+
+/* ==================
+   Quick Links Panel
+   ================== */
+
+.quick-links h2,
+.about h2 {
+
+    margin-bottom: 1.25rem;
+
+    font-size: 1.7rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: .08rem;
+
+}
+
+
+.quick-links ul {
+
+    margin-bottom: 2rem;
+
+    list-style: none;
+
+}
+
+
+.quick-links li {
+
+    border-bottom:
+        1px solid rgba(255, 255, 255, .07);
+
+}
+
+
+.quick-links li:last-child {
+
+    border-bottom: none;
+
+}
+
+
+.quick-links li a {
+
+    display: block;
+
+    padding: .7rem 0;
+
+    color:
+        var(--text-muted);
+
+}
+
+
+.quick-links li a::before {
+
+    content: "✦";
+
+    margin-right: .65rem;
+
+    color:
+        var(--accent);
+
+    font-size: .75rem;
+
+}
+
+
+.quick-links li a:hover {
+
+    padding-left: .4rem;
+
+    color:
+        var(--accent-light);
+
+}
+
+
+/* ================
+   Newsletter Area
+   ================ */
+
+.quick-links h3 {
+
+    margin-bottom: 1rem;
+
+    font-size: 1.15rem;
+
+}
+
+
+.quick-links form {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: .75rem;
+
+}
+
+
+.quick-links label {
+
+    color:
+        var(--text-muted);
+
+    font-size: .9rem;
+
+}
+
+
+.quick-links input {
+
+    width: 100%;
+
+    padding: .85rem 1rem;
+
+    background:
+        var(--background);
+
+    color:
+        var(--text);
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 8px;
+
+    font: inherit;
+
+    transition:
+        border-color .3s ease,
+        box-shadow .3s ease;
+
+}
+
+
+.quick-links input::placeholder {
+
+    color:
+        #70798c;
+
+}
+
+
+.quick-links input:focus {
+
+    outline: none;
+
+    border-color:
+        var(--accent);
+
+    box-shadow:
+        0 0 0 3px rgba(201, 165, 92, .18);
+
+}
+
+
+.quick-links form button {
+
+    padding: .85rem 1rem;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--accent),
+            var(--accent-light)
+        );
+
+    color:
+        #111;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+
+}
+
+
+.quick-links form button:hover {
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(201, 165, 92, .25);
+
+}
+
+
+/* ==============
+   About Section
+   ============== */
+
+.about {
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+
+/* Twin star decoration */
+
+.about::before,
+.about::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 8px;
+    height: 8px;
+
+    background:
+        var(--accent-light);
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 15px rgba(242, 216, 138, .8);
+
+}
+
+
+.about::before {
+
+    top: 2rem;
+    right: 3rem;
+
+}
+
+
+.about::after {
+
+    top: 3.25rem;
+    right: 5rem;
+
+}
+
+
+.about p {
+
+    max-width: 75ch;
+
+    margin-bottom: 1rem;
+
+    color:
+        var(--text-muted);
+
+    font-size: 1.05rem;
+
+}
+
+
+.about p:last-child {
+
+    margin-bottom: 0;
+
+}
+
+
+/* ========
+   Footer
+   ======== */
+
+footer {
+
+    padding: 2rem 5%;
+
+    background:
+        rgba(5, 7, 12, .95);
+
+    border-top:
+        1px solid var(--border);
+
+    text-align: center;
+
+}
+
+
+footer p {
+
+    color:
+        var(--text-muted);
+
+    font-size: .9rem;
+
+}
+
+
+/* =============
+   Focus States
+   ============= */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+
+    outline:
+        3px solid var(--accent-light);
+
+    outline-offset:
+        3px;
+
+}
+
+
+/* =======================
+   Reduced Motion Support
+   =======================*/
+
+@media (prefers-reduced-motion: reduce) {
+
+    * {
+
+        scroll-behavior: auto !important;
+
+        transition-duration: .01ms !important;
+
+        animation-duration: .01ms !important;
+
+        animation-iteration-count: 1 !important;
+
+    }
+
+}
+
+/* ============================
+   Prevent Horizontal Overflow
+   ============================ */
+
+html,
+body {
+
+    max-width: 100%;
+
+    overflow-x: hidden;
+
+}
+
+
+/* ===================
+   Interactive Polish
+   =================== */
+
+.nav-links a,
+.shop-button,
+.details-button,
+.carousel-button,
+.search-area input,
+.search-area button,
+.quick-links input,
+.quick-links button {
+
+    transition:
+        background-color .3s ease,
+        color .3s ease,
+        border-color .3s ease,
+        box-shadow .3s ease,
+        transform .3s ease;
+
+}
+
+
+/* ==============
+   Tablet Layout
+   ============== */
+
+@media (max-width: 1100px) {
+
+    /* Navigation */
+
+    nav {
+
+        flex-wrap: wrap;
+
+        gap: 1rem;
+
+        padding:
+            1rem
+            4%;
+
+    }
+
+
+    .logo {
+
+        flex: 1;
+
+    }
+
+
+    .nav-links {
+
+        order: 3;
+
+        width: 100%;
+
+        justify-content: center;
+
+        padding-top: .75rem;
+
+        border-top:
+            1px solid var(--border);
+
+    }
+
+
+    .search-area input {
+
+        width: 180px;
+
+    }
+
+
+    /* Hero */
+
+    .hero {
+
+        gap: 1rem;
+
+        padding:
+            3rem
+            4%;
+
+    }
+
+
+    .hero-content {
+
+        gap: 2rem;
+
+    }
+
+
+    .hero-content img {
+
+        width: 55%;
+
+    }
+
+
+    .hero-text {
+
+        width: 45%;
+
+    }
+
+
+    .hero-text h1 {
+
+        font-size: 2.7rem;
+
+    }
+
+
+    .carousel-button {
+
+        width: 50px;
+        height: 50px;
+
+        flex-shrink: 0;
+
+    }
+
+
+    /* Product Grid */
+
+    .product-grid {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+    }
+
+
+    /* Lower Information Section */
+
+    .information {
+
+        grid-template-columns:
+            1fr
+            1.5fr;
+
+    }
+
+}
+
+
+/* ==============
+   Tablet Layout
+   ==============*/
+
+@media (max-width: 800px) {
+
+    /* Announcement Bar */
+
+    .announcement-bar {
+
+        padding: .65rem 1rem;
+
+        font-size: .8rem;
+
+    }
+
+
+    /* Navigation */
+
+    nav {
+
+        position: relative;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 1rem;
+
+        padding:
+            1rem
+            5%;
+
+    }
+
+
+    .logo {
+
+        width: 100%;
+
+        text-align: center;
+
+    }
+
+
+    .logo a {
+
+        font-size: 1.5rem;
+
+    }
+
+
+    .nav-links {
+
+        order: initial;
+
+        display: grid;
+
+        grid-template-columns:
+            repeat(3, 1fr);
+
+        gap: .5rem;
+
+        width: 100%;
+
+        padding-top: 1rem;
+
+        text-align: center;
+
+    }
+
+
+    .nav-links a {
+
+        display: block;
+
+        padding: .6rem .4rem;
+
+        background:
+            rgba(255, 255, 255, .04);
+
+        border:
+            1px solid var(--border);
+
+        border-radius: 8px;
+
+    }
+
+
+    .nav-links a::after {
+
+        display: none;
+
+    }
+
+
+    .nav-links a:hover {
+
+        background:
+            rgba(201, 165, 92, .14);
+
+        border-color:
+            var(--accent);
+
+    }
+
+
+    .search-area {
+
+        width: 100%;
+
+    }
+
+
+    .search-area input {
+
+        flex: 1;
+
+        width: auto;
+
+        min-width: 0;
+
+    }
+
+
+    /* Hero Layout */
+
+    .hero {
+
+        position: relative;
+
+        display: block;
+
+        padding:
+            2.5rem
+            5%;
+
+    }
+
+
+    .hero-content {
+
+        flex-direction: column;
+
+        gap: 1.5rem;
+
+    }
+
+
+    .hero-content img {
+
+        width: 100%;
+
+        max-height: 520px;
+
+        object-fit: cover;
+
+    }
+
+
+    .hero-text {
+
+        width: 100%;
+
+        text-align: center;
+
+    }
+
+
+    .hero-text h1 {
+
+        font-size:
+            clamp(2.2rem, 9vw, 3rem);
+
+    }
+
+
+    .hero-text p {
+
+        max-width: 600px;
+
+        margin:
+            0 auto
+            1.75rem;
+
+    }
+
+
+    .carousel-button {
+
+        position: absolute;
+
+        top: 35%;
+
+        z-index: 5;
+
+        width: 46px;
+        height: 46px;
+
+        background:
+            rgba(9, 11, 18, .8);
+
+    }
+
+
+    #previousButton {
+
+        left: 7%;
+
+    }
+
+
+    #nextButton {
+
+        right: 7%;
+
+    }
+
+
+    /* Product Section */
+
+    .featured {
+
+        width: 90%;
+
+        padding:
+            2rem
+            0
+            4rem;
+
+    }
+
+
+    .featured h2 {
+
+        margin-bottom: 1.5rem;
+
+    }
+
+
+    /* Information Layout */
+
+    .information {
+
+        grid-template-columns:
+            1fr;
+
+        width: 90%;
+
+    }
+
+
+    .quick-links,
+    .about {
+
+        padding: 1.5rem;
+
+    }
+
+
+    .about p {
+
+        max-width: none;
+
+    }
+
+}
+
+
+/* ==============
+   Mobile Layout
+   ============== */
+
+@media (max-width: 560px) {
+
+    body {
+
+        font-size: .95rem;
+
+    }
+
+
+    /* Announcement Bar */
+
+    .announcement-bar p {
+
+        line-height: 1.4;
+
+    }
+
+
+    /* Navigation */
+
+    nav {
+
+        padding:
+            .9rem
+            4%;
+
+    }
+
+
+    .logo a {
+
+        font-size: 1.3rem;
+
+        letter-spacing: .1rem;
+
+    }
+
+
+    .nav-links {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+    .nav-links li:last-child {
+
+        grid-column:
+            1 / -1;
+
+    }
+
+
+    .search-area {
+
+        gap: .4rem;
+
+    }
+
+
+    .search-area input {
+
+        padding:
+            .65rem
+            .85rem;
+
+    }
+
+
+    #searchButton {
+
+        width: 40px;
+        height: 40px;
+
+        flex-shrink: 0;
+
+    }
+
+
+    /* Hero */
+
+    .hero {
+
+        padding:
+            2rem
+            4%;
+
+    }
+
+
+    .hero-content img {
+
+        min-height: 300px;
+
+    }
+
+
+    .hero-text h1 {
+
+        font-size:
+            clamp(1.9rem, 10vw, 2.5rem);
+
+        letter-spacing: .08rem;
+
+    }
+
+
+    .hero-text p {
+
+        font-size: 1rem;
+
+    }
+
+
+    .shop-button {
+
+        width: 100%;
+
+        max-width: 320px;
+
+        padding:
+            .9rem
+            1.25rem;
+
+        text-align: center;
+
+    }
+
+
+    .carousel-button {
+
+        top: 29%;
+
+        width: 42px;
+        height: 42px;
+
+        font-size: 1.2rem;
+
+    }
+
+
+    #previousButton {
+
+        left: 6%;
+
+    }
+
+
+    #nextButton {
+
+        right: 6%;
+
+    }
+
+
+    /* Product Grid */
+
+    .featured {
+
+        width: 92%;
+
+    }
+
+
+    .featured h2 {
+
+        font-size: 1.8rem;
+
+        letter-spacing: .1rem;
+
+    }
+
+
+    .product-grid {
+
+        grid-template-columns:
+            1fr;
+
+        gap: 1.25rem;
+
+    }
+
+
+    .product-card {
+
+        padding: .9rem;
+
+    }
+
+
+    .product-card img {
+
+        aspect-ratio: 1 / 1;
+
+    }
+
+
+    .product-card h3 {
+
+        font-size: 1.15rem;
+
+    }
+
+
+    /* Information Area */
+
+    .information {
+
+        width: 92%;
+
+        margin-bottom: 3rem;
+
+    }
+
+
+    .quick-links h2,
+    .about h2 {
+
+        font-size: 1.45rem;
+
+    }
+
+
+    .quick-links form button {
+
+        width: 100%;
+
+    }
+
+
+    /* Footer */
+
+    footer {
+
+        padding:
+            1.5rem
+            1rem;
+
+    }
+
+}
+
+
+/* ======================
+   For Very Small Screens
+   ====================== */
+
+@media (max-width: 360px) {
+
+    .nav-links {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .nav-links li:last-child {
+
+        grid-column: auto;
+
+    }
+
+
+    .search-area {
+
+        align-items: stretch;
+
+    }
+
+
+    .hero-text h1 {
+
+        font-size: 1.8rem;
+
+    }
+
+
+    .carousel-button {
+
+        width: 38px;
+        height: 38px;
+
+    }
+
+}
+
+
+/* ===========================
+   Larger Desktop Enhancement
+   =========================== */
+
+@media (min-width: 1450px) {
+
+    .hero {
+
+        min-height: 650px;
+
+    }
+
+
+    .hero-text h1 {
+
+        font-size: 4rem;
+
+    }
+
+
+    .product-grid {
+
+        gap: 2rem;
+
+    }
+
+}
+
+
+/* =========================
+   High Contrast Preference
+   ========================= */
+
+@media (prefers-contrast: more) {
+
+    :root {
+
+        --text: #ffffff;
+        --text-muted: #d8dce5;
+        --border: rgba(255, 255, 255, .35);
+
+    }
+
+
+    .product-card,
+    .quick-links,
+    .about {
+
+        border-width: 2px;
+
+    }
+
+
+    .details-button,
+    .nav-links a {
+
+        border-color:
+            rgba(255, 255, 255, .5);
+
+    }
+
+}
+
+
+/* =============
+   Print Styles
+   ============= */
+
+@media print {
+
+    .announcement-bar,
+    nav,
+    .carousel-button,
+    .shop-button,
+    .details-button,
+    .quick-links form {
+
+        display: none;
+
+    }
+
+    body {
+
+        background: #ffffff;
+
+        color: #000000;
+
+    }
+
+    .product-card,
+    .quick-links,
+    .about {
+
+        color: #000000;
+
+        background: #ffffff;
+
+        box-shadow: none;
+
+        border:
+            1px solid #555555;
+
+    }
+
+    footer p,
+    .about p {
+        color: #000000;
+    }
+}
+/* =============================
+   JavaScript-Generated Content
+   ============================= */
+
+.no-results-message {
+
+    margin-top: 2rem;
+
+    padding: 1rem;
+
+    color: var(--text-muted);
+
+    text-align: center;
+
+    border: 1px solid var(--border);
+
+    border-radius: 10px;
+
+}
+
+
+.product-description {
+
+    margin-bottom: 1rem;
+
+    color: var(--text-muted);
+
+    font-size: .9rem;
+
+    line-height: 1.5;
+
+}
+
+
+.form-message {
+
+    min-height: 1.5rem;
+
+    margin-top: .25rem;
+
+    font-size: .9rem;
+
+}
+
+
+.success-message {
+
+    color: var(--accent-light);
+
+}
+
+
+.error-message {
+
+    color: #ff9b9b;
+
+}
+
+[hidden] {
+
+    display: none !important;
+
+}
