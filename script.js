@@ -27,18 +27,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const heroSlides = [
         {
-            image: "images/hero-placeholder.jpg",
-            alt: "TDBD",
+            image: "gemini hero.jpg",
+            alt: "Jacket",
             heading: "Beyond the Horizon",
             description:
-                "TBD"
+                "Premium apparel inspired by the event horizon."
         },
         {
-            image: "images/hero-placeholder-2.jpg",
-            alt: "TBD",
-            heading: "TBD",
+            image: "the gemini twins.jpg",
+            alt: "Two sets",
+            heading: "The Gemini Twins",
             description:
-                "TBD"
+                "Be one with your constellation"
         },
         {
             image: "images/hero-placeholder-3.jpg",
@@ -328,6 +328,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
         }
 
+    });
+
+});
     });
 
 });
